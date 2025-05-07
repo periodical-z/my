@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>爱国宣言</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+    #inputBox { font-size: 16px; padding: 8px; width: 200px; }
+    #btn { font-size: 16px; padding: 8px 16px; }
+    #message { margin-top: 20px; font-size: 20px; color: #007BFF; }
+  </style>
+</head>
+<body>
+
+  <h1>请输入口令</h1>
+  <input id="inputBox" placeholder="输入‘I love my country’" />
+  <button id="btn">提交</button>
+  <div id="message"></div>
+
+  <script>
+    document.getElementById('btn').onclick = function() {
+      const v = document.getElementById('inputBox').value.trim();
+      const msgEl = document.getElementById('message');
+      if (v === 'I love my country') {
+        msgEl.textContent = '清澈的爱只为中国';
+      } else {
+        msgEl.textContent = '输入错误，请重新输入';
+      }
+    };
+    // 页面加载时，可以自动聚焦或者直接弹窗
+    document.getElementById('inputBox').focus();
+  </script>
+
+</body>
+</html>
